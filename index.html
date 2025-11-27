@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Image Compressor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Compressor Tool</h1>
+        <p>Apni image upload karein aur size kam karein.</p>
+        <div class="upload-box">
+            <input type="file" id="uploadFile" accept="image/*">
+            <label for="uploadFile">📁 Click to Upload Image</label>
+        </div>
+        <div class="preview-container" id="previewContainer" style="display:none;">
+            <div class="image-box">
+                <h3>Original</h3>
+                <img id="originalImage" src="" alt="Original">
+                <p id="originalSize"></p>
+            </div>
+            <div class="controls">
+                <label for="quality">Compression Quality (0-100):</label>
+                <input type="range" id="quality" min="1" max="100" value="60">
+                <span id="qualityValue">60%</span>
+                <button id="compressBtn">Compress Now</button>
+            </div>
+            <div class="image-box">
+                <h3>Compressed</h3>
+                <img id="compressedImage" src="" alt="Compressed">
+                <p id="compressedSize"></p>
+                <a id="downloadBtn" class="btn-download" download="compressed.jpg">Download Image</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
